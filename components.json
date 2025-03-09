@@ -1,0 +1,54 @@
+{
+  "components": [
+    {
+      "id": "cpu",
+      "name": "CPU (Processor)",
+      "details": "Executes instructions and processes data."
+    },
+    {
+      "id": "motherboard",
+      "name": "Motherboard",
+      "details": "Main circuit board connecting all components."
+    },
+    {
+      "id": "ram",
+      "name": "RAM (Memory)",
+      "details": "Provides temporary storage for active processes."
+    },
+    {
+      "id": "storage",
+      "name": "Storage",
+      "details": "Options include SSDs for speed and HDDs for capacity."
+    },
+    {
+      "id": "gpu",
+      "name": "GPU (Graphics Card)",
+      "details": "Renders images and video for displays."
+    },
+    {
+      "id": "psu",
+      "name": "Power Supply Unit (PSU)",
+      "details": "Converts AC to DC power for all parts."
+    },
+    {
+      "id": "cooling",
+      "name": "Cooling System",
+      "details": "Fans or liquid cooling to prevent overheating."
+    },
+    {
+      "id": "case",
+      "name": "Case",
+      "details": "Enclosure that houses and protects the components."
+    },
+    {
+      "id": "extras",
+      "name": "Additional Components",
+      "details": "May include optical drives, sound cards, and network cards."
+    },
+    {
+      "id": "os",
+      "name": "Operating System",
+      "details": "Software that manages hardware and software resources."
+    }
+  ]
+}

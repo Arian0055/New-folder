@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PC Components</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .component { 
+      cursor: pointer; 
+      background: #f0f0f0; 
+      margin: 5px 0; 
+      padding: 10px; 
+      border: 1px solid #ccc;
+      transition: background-color 0.3s ease;
+    }
+
+    .component:hover{
+      background-color: #a934c7;
+
+    }
+    .details { 
+      display: none; 
+      padding: 10px; 
+      margin: 5px 0 15px 0; 
+      border: 1px solid #ddd;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="components-container"></div>
+
+  <script>
+    // Load components from JSON file
+    fetch('components.json')
+      .then(response => response.json())
+      .then(data => {
+         const container = document.getElementById('components-container');
+         data.components.forEach(component => {
+             // Create component header element
+             const compEl = document.createElement('div');
+             compEl.className = 'component';
+             compEl.textContent = component.name;
+             compEl.addEventListener('click', () => {
+                const detailEl = document.getElementById(component.id);
+                detailEl.style.display = (detailEl.style.display === 'block') ? 'none' : 'block';
+             });
+             container.appendChild(compEl);
+
+             // Create details element
+             const detailEl = document.createElement('div');
+             detailEl.className = 'details';
+             detailEl.id = component.id;
+             detailEl.textContent = component.details;
+             container.appendChild(detailEl);
+         });
+      })
+      .catch(err => console.error('Error loading JSON:', err));
+  </script>
+
+</body>
+</html>
